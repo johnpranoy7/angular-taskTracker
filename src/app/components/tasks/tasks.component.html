@@ -1,0 +1,4 @@
+<app-add-task (onAddTask)="addTaskExecutor($event)"></app-add-task>
+<app-task-item *ngFor="let task of tasks" [task]="task" (onDeleteTask)="onDeleteExecutor(task)" (onToggleTask)="onToggleHandler(task)"></app-task-item>
+<!-- <p *ngFor="let task of tasks"> {{task.text}} </p> -->
+
