@@ -1,10 +1,10 @@
 <header>
-    <h1>
-        {{ title }}
-    </h1>
-    <app-button 
-    text="{{ toggleAddTaskUI ? 'Add' : 'Close'}}"
-    color= "{{ toggleAddTaskUI ? 'green' : 'red'}}"
-    (btnClick)='toggleAddTask()'></app-button>
+  <h1>
+    {{ title }}
+  </h1>
+  <app-button *ngIf="hasRoute('/')"
+    text="{{ toggleAddTaskUI ? 'Close' : 'Add' }}"
+    color="{{ toggleAddTaskUI ? 'red' : 'green' }}"
+    (btnClick)="toggleAddTask()"
+  ></app-button>
 </header>
-
